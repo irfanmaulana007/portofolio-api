@@ -16,6 +16,7 @@ class AppController extends Controller
 		    'country' => $profile->country,
 		    'city' => $profile->city,
 		    'job' => $profile->job,
+		    'company' => $profile->company,
 		    'dob' => $profile->dob,
 		    'updated_at' => $profile->updated_at,
 		]);

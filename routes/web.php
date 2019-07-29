@@ -12,5 +12,6 @@
 */
 
 Route::get('/', 'AppController@getProfile');
-Route::get('/get-profile', 'AppController@getProfile');
-Route::resource('/contact', 'ContactController');
+Route::get('/api/get-profile', 'AppController@getProfile');
+Route::get('/api/get-project', 'ProjectController@getProject');
+Route::resource('/api/contact', 'ContactController');
