@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Profile;
 
-class AppController extends Controller
+class ProfileController extends Controller
 {
 	public function getProfile(){
 		$profile = Profile::first();

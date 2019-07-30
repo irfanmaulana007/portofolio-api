@@ -11,7 +11,17 @@
 |
 */
 
-Route::get('/', 'AppController@getProfile');
-Route::get('/api/get-profile', 'AppController@getProfile');
+Route::get('/', 'ProfileController@getProfile');
+
+// Login
+Route::post('/api/login', 'AuthController@login');
+
+// Profile
+Route::get('/api/get-profile', 'ProfileController@getProfile');
+
+// Project
 Route::get('/api/get-project', 'ProjectController@getProject');
-Route::resource('/api/contact', 'ContactController');
+
+// Contact
+Route::get('/api/contact', 'ContactController@get');
+Route::post('/api/contact', 'ContactController@send');
