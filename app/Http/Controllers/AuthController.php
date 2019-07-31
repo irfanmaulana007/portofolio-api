@@ -14,6 +14,7 @@ class AuthController extends Controller
         $inputPassword = $request->password;
         $message = $userId = $name = $username = $email = '';
         $login = false;
+        $status = 'failed';
 
         $user = User::where('username', $inputUsername)->first();
 
@@ -25,6 +26,7 @@ class AuthController extends Controller
                 $message = 'invalid password';
                 $login = false;
             } else {
+                $status = 'success';
                 $message = 'login success';
                 $userId = $user->id;
                 $name = $user->name;
@@ -35,8 +37,11 @@ class AuthController extends Controller
         }
 
         return response()->json([
-            'login' => $login,
-            'message' => $message,
+            'response' => [
+                'login' => $login,
+                'status' => $status,
+                'message' => $message
+            ],
             'userId' => $userId,
             'name' => $name,
             'username' => $username,
