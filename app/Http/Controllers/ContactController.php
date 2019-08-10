@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Contact;
+use App\Mail\Contact as sendContact;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -19,6 +21,9 @@ class ContactController extends Controller
         $contact->subject = $request->subject;
         $contact->message = $request->message;
         $contact->save();
+
+        Mail::to(env('MAIL_TO_ADDRESS'))
+                ->send(new sendContact($request->email, $request->subject, $request->message));
 
         return response()->json([
             'message' => 'success'
