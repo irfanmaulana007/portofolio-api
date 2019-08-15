@@ -12,17 +12,45 @@ class projectSeeder extends Seeder
     public function run()
     {
         DB::table('projects')->insert([
-            'name' => 'Portofolio',
-            'description' => 'Irfan Maulana\'s Portofolio',
+            'name' => 'Bonzzano',
+            'description' => 'Convection',
             'image' => '',
-            'date' => '2019/03/15',
+            'date' => '2016/08/01',
         ]);
 
         DB::table('projects')->insert([
-            'name' => 'Portofolio2',
-            'description' => 'Irfan Maulana\'s Portofolio',
-            'image' => '',
-            'date' => '2019/03/15',
+            'name' => 'Laundry Chuy',
+            'description' => 'Laundry Online',
+            'image' => 'laundrychuy.jpg',
+            'date' => '2017/04/18',
+        ]);
+
+        DB::table('projects')->insert([
+            'name' => 'Pickpack',
+            'description' => 'Pickpack Site',
+            'image' => 'pickpack.png',
+            'date' => '2017/08/01',
+        ]);
+
+        DB::table('projects')->insert([
+            'name' => 'T-Force',
+            'description' => 'Toyota Astra Motor Forecasting System',
+            'image' => 't-force.png',
+            'date' => '2018/10/01',
+        ]);
+
+        DB::table('projects')->insert([
+            'name' => 'Braon Store',
+            'description' => 'Online Store',
+            'image' => 'braonstore.jpg',
+            'date' => '2019/03/25',
+        ]);
+
+        DB::table('projects')->insert([
+            'name' => 'Indo Kordsa',
+            'description' => 'Synchronize System',
+            'image' => 'indokordsa.jpeg',
+            'date' => '2019/07/17',
         ]);
     }
 }

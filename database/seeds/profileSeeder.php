@@ -15,9 +15,11 @@ class profileSeeder extends Seeder
             'fullname' => 'Irfan Maulana',
             'email' => 'irfanmaulana695@gmail.com',
             'country' => 'indonesia',
-            'city' => 'dki jakarta',
+            'city' => 'central jakarta',
             'job' => 'fullstack developer',
             'company' => 'PT. Semut Merah Informatika',
+            'status' => 'Looking for a job',
+            'workStartDate' => '2017/02/20',
             'dob' => '1997/03/15'
         ]);
     }

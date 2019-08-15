@@ -21,6 +21,8 @@ class Profile extends Migration
             $table->string('city', 20);
             $table->string('job', 20);
             $table->string('company', 30);
+            $table->string('status', 30);
+            $table->date('workStartDate');
             $table->date('dob');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();

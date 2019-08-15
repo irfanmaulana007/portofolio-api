@@ -17,7 +17,9 @@ class ProfileController extends Controller
 		    'city' => $profile->city,
 		    'job' => $profile->job,
 		    'company' => $profile->company,
+		    'workStartDate' => $profile->workStartDate,
 		    'dob' => $profile->dob,
+		    'status' => $profile->status,
 		    'updated_at' => $profile->updated_at,
 		]);
 	}
