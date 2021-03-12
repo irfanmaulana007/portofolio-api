@@ -16,17 +16,22 @@ class ContactController extends Controller
     }
 
     public function send (Request $request) {
-        $contact = new Contact();
-        $contact->email = $request->email;
-        $contact->subject = $request->subject;
-        $contact->message = $request->message;
-        $contact->save();
-
-        Mail::to(env('MAIL_TO_ADDRESS'))
-                ->send(new sendContact($request->email, $request->subject, $request->message));
-
-        return response()->json([
-            'message' => 'success'
+        // dd($request->email);
+        Contact::Create([
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'message' => $request->message
         ]);
+
+        try {
+            Mail::to(env('MAIL_TO_ADDRESS'))->send(new sendContact($request->email, $request->subject, $request->message));
+			
+            return response()->json([
+                'message' => 'success'
+            ]);
+    	} catch (\Exception $e) {
+    		return $e->getMessage();
+    	}
+
     }
 }

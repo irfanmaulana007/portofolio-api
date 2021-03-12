@@ -17,6 +17,7 @@ class CreateProjectsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('description');
+            $table->string('link')->nullable();
             $table->string('image')->nullable();
             $table->date('date');
             $table->timestamp('created_at')->useCurrent();

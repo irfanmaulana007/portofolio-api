@@ -13,12 +13,12 @@ class profileSeeder extends Seeder
     {
         DB::table('profile')->insert([
             'fullname' => 'Irfan Maulana',
-            'email' => 'irfanmaulana695@gmail.com',
+            'email' => 'hello@irfanmaulana007.com',
             'country' => 'indonesia',
             'city' => 'central jakarta',
-            'job' => 'fullstack developer',
+            'job' => 'Fullstack Engineer',
             'company' => 'PT. Semut Merah Informatika',
-            'status' => 'Looking for a job',
+            'status' => 'Looking for new opportunity',
             'workStartDate' => '2017/02/20',
             'dob' => '1997/03/15'
         ]);

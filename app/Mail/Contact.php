@@ -6,7 +6,6 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Mail\Mailer as Mail;
 
 class Contact extends Mailable
 {
@@ -23,9 +22,9 @@ class Contact extends Mailable
         $this->email = $email;
         $this->subject = $subject;
         $this->msg = $msg;
-
+        
     }
-
+    
     /**
      * Build the message.
      *
