@@ -17,7 +17,7 @@ class Contacts extends Migration
             $table->increments('id');
             $table->string('email');
             $table->string('subject');
-            $table->string('message');
+            $table->string('message', 1000);
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });
